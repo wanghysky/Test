@@ -41,9 +41,9 @@ android {
         }
 
         release {
-            minifyEnabled true // 开启混淆
-            shrinkResources true // 启动资源压缩
-            zipAlignEnabled true // 开启zipalign优化
+            minifyEnabled false // 开启混淆
+            shrinkResources false // 启动资源压缩
+            zipAlignEnabled false // 开启zipalign优化
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
             applicationVariants.all { variant ->

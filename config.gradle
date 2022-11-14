@@ -4,7 +4,7 @@ ext {
             minSdk     : 21,
             targetSdk  : 31,
             versionCode: 5,
-            versionName: "1.5"
+            versionName: "0.1"
     ]
 
     dependencies = [
@@ -24,18 +24,8 @@ ext {
 
             //---------------UI相关-------------
             recyclerview                 : 'androidx.recyclerview:recyclerview:1.2.1',
-            // BaseRecyclerViewAdapterHelper
-            BaseRecyclerViewAdapterHelper: 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7',
-            // material风格功能强大的Dialog
-            materialDialogsCore          : 'com.afollestad.material-dialogs:core:3.3.0',
-            materialDialogsLifecycle     : 'com.afollestad.material-dialogs:lifecycle:3.3.0',
-            materialDialogsbottomsheets  : 'com.afollestad.material-dialogs:bottomsheets:3.3.0',
-            // 轮播图 https://github.com/youth5201314/banner
-            banner                       : 'io.github.youth5201314:banner:2.2.2',
             // 更强大的webView
             agentWeb                     : 'com.github.Justson.AgentWeb:agentweb-core:v4.1.9-androidx',
-            // 屏幕适配https://github.com/JessYanCoding/AndroidAutoSize
-            AndroidAutoSize              : 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1',
 
             //---------------存储相关------------------
             // 替代SharePreference

@@ -39,8 +39,6 @@ open class BaseApp : Application(), ViewModelStoreOwner {
             this, ImagePipelineConfig.newBuilder(appContext)
                 .setMainDiskCacheConfig(
                     DiskCacheConfig.newBuilder(appContext)
-                        .setBaseDirectoryName("WorkPic")
-                        .setBaseDirectoryPath(Environment.getExternalStoragePublicDirectory("photo"))
                         .build()
                 )
                 .build()
