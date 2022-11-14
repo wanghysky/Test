@@ -1,5 +1,7 @@
 package com.why.lib_base.ext
 
+import androidx.appcompat.widget.Toolbar
+
 /**
  *
  * @author why
@@ -7,4 +9,13 @@ package com.why.lib_base.ext
  */
 fun hideLoading() {
 
+}
+
+/**
+ * 初始化普通的toolbar 只设置标题
+ *
+ * @param titleStr 标题
+ */
+fun Toolbar.initTitle(titleStr: String = "") {
+    title = titleStr
 }

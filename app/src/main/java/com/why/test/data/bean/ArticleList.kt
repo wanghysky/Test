@@ -1,10 +1,15 @@
 package com.why.test.data.bean
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 /**
  *
  * @author why
  * @date 2022/11/14 11:01
  */
-data class ArticleList(var frontmatter: FrontMatter)
+@Parcelize
+data class ArticleList(var frontmatter: FrontMatter) : Parcelable
 
-data class FrontMatter(val title:String,val date: String,val path: String)
+@Parcelize
+data class FrontMatter(val title:String,val date: String,val path: String) : Parcelable
