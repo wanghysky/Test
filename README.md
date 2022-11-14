@@ -27,7 +27,7 @@
 ![3a06dafe17d921331ad5f660d5bc47e](https://user-images.githubusercontent.com/29591960/201714682-29e8c4dc-a37b-45f2-8df9-88b102507d43.jpg)
 
 - 文章详情页
-![3a06dafe17d921331ad5f660d5bc47e](https://user-images.githubusercontent.com/29591960/201714711-85b868e3-556c-46f0-b865-e31593002eb3.jpg)
+![2250c841de72b6819fdf824406ee952](https://user-images.githubusercontent.com/29591960/201714813-7a1e9864-f449-417a-836c-c2a585681032.jpg)
 
 ## APK下载
 - https://raw.githubusercontent.com/wanghysky/Test/tree/main/app/release
