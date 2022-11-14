@@ -16,6 +16,8 @@ import com.why.lib_base.base.BaseActivity
 import com.why.lib_base.ext.initTitle
 import com.why.lib_base.kotterknife.bindOptionalView
 import com.why.lib_base.kotterknife.bindView
+import com.why.lib_base.network.IpManager
+import com.why.lib_base.util.StatusBarUtil
 import com.why.test.R
 import com.why.test.data.bean.ArticleList
 import com.why.test.vm.WebViewModel
@@ -34,34 +36,21 @@ class WebActivity : BaseActivity<WebViewModel>() {
 
     private var url: String ?= null
     private var titleText: String ?= null
-    private var articleList: ArticleList ?= null
+    private val baseUrl = IpManager.getDefaultIP()
 
-    companion object {
-        private const val EXTRA_ARTICLE = "extra_article"
 
-        /**
-         * 页面跳转
-         *
-         * @param context Context
-         * @param article Article
-         */
-        fun launch(context: Context, article: ArticleList) {
-            context.startActivity(Intent(context, WebActivity::class.java).apply {
-                putExtra(EXTRA_ARTICLE, article)
-            })
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web)
         intent.apply {
-            articleList = getParcelableExtra(EXTRA_ARTICLE)
+            url = baseUrl + getStringExtra(EXTRA_ARTICLE)
         }
         toolbar?.apply {
             setSupportActionBar(this)
             initTitle("加载中...")
         }
+        StatusBarUtil.setImmersionStatus(this)
         initView()
     }
 
@@ -114,4 +103,21 @@ class WebActivity : BaseActivity<WebViewModel>() {
         agentWeb?.webLifeCycle?.onDestroy()
         super.onDestroy()
     }
+
+    companion object {
+        private const val EXTRA_ARTICLE = "extra_article"
+
+        /**
+         * 页面跳转
+         *
+         * @param context Context
+         * @param article Article
+         */
+        fun launch(context: Context, url: String) {
+            context.startActivity(Intent(context, WebActivity::class.java).apply {
+                putExtra(EXTRA_ARTICLE, url)
+            })
+        }
+    }
+
 }

@@ -13,13 +13,6 @@ import com.why.test.data.DataRepository
  */
 class MainViewModel: BaseViewModel() {
 
-    fun getArticlePageList() {
-        launch({
-            handleRequest(
-                DataRepository.getArticlePageList()
-            ) { LogUtil.e("TEST : isLifeCirce  $it") }
-        })
-    }
 
     override fun clear() {
 

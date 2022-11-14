@@ -24,5 +24,8 @@
     <color name="_f0f0f0">#f0f0f0</color>
     <color name="_f5f5f5">#f5f5f5</color>
     <color name="_ff4a57">#ff4a57</color>
+    <color name="transparent">#00000000</color>
     <color name="_ffffff">#ffffff</color>
+    <color name="main_blue">#0086F6</color>
+
 </resources>

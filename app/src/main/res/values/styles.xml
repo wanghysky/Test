@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="a_in" format="float" />
+    <attr name="a_out" format="float" />
+    <attr name="x_in" format="float" />
+    <attr name="x_out" format="float" />
+    <attr name="y_in" format="float" />
+    <attr name="y_out" format="float" />
+
+    <attr name="close_color" format="color" />
+    <attr name="open_color" format="color" />
+    <attr name="checked" format="boolean" />
+    <declare-styleable name="TagContainerView">
+        <attr name="tag_vertical_margin" format="dimension" />
+        <attr name="tag_horizontal_margin" format="dimension" />
+        <attr name="tag_text_color" format="color" />
+        <attr name="tag_padding_vertical" format="dimension" />
+        <attr name="tag_padding_horizontal" format="dimension" />
+        <attr name="tag_text_size" format="dimension" />
+        <attr name="tag_bg_drawable" format="reference" />
+        <attr name="tag_bg_drawable_selected" format="reference" />
+        <attr name="tag_text_color_selected" format="color" />
+    </declare-styleable>
+
+    <!--圆开关-->
+    <declare-styleable name="CircleSwitcher">
+        <attr name="close_color" />
+        <attr name="open_color" />
+        <attr name="checked" />
+    </declare-styleable>
+
+    <!--椭圆开关-->
+    <declare-styleable name="OvalSwitcher">
+        <attr name="close_color" />
+        <attr name="open_color" />
+        <attr name="checked" />
+    </declare-styleable>
+
+    <!--Tag星球视图-->
+    <declare-styleable name="TagPlanetView">
+        <attr name="lightColor" format="color" />
+        <attr name="darkColor" format="color" />
+    </declare-styleable>
+</resources>

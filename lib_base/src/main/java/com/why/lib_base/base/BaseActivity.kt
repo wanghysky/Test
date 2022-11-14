@@ -18,7 +18,7 @@ import java.net.UnknownHostException
  * @author why
  * @date 2022/11/14 10:02
  */
-abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(){
+abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity() {
 
     @Suppress("UNCHECKED_CAST")
     protected val viewModel: VM by lazy {
@@ -26,6 +26,7 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(){
         val modelClass: Class<VM> = (type as ParameterizedType).actualTypeArguments[0] as Class<VM>
         ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[modelClass]
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // 设置沉浸式状态栏，由于启动页SplashActivity需要无状态栏，这里写死不太好
@@ -38,6 +39,7 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(){
         }
 
         createObserve()
+        initObserver()
     }
 
     /** 是否是无状态栏的全屏模式 */
@@ -45,6 +47,12 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(){
         return false
     }
 
+    /**
+     * 注册Observer
+     * */
+    open fun initObserver() {
+
+    }
 
     /** 提供编写LiveData监听逻辑的方法 */
     open fun createObserve() {
@@ -52,7 +60,7 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(){
         viewModel.apply {
             exception.observe(this@BaseActivity) {
                 requestError(it.message)
-                LogUtil.e( "网络请求错误：${it.message}")
+                LogUtil.e("网络请求错误：${it.message}")
                 when (it) {
                     is SocketTimeoutException -> ToastUtil.showShort(
                         this@BaseActivity,

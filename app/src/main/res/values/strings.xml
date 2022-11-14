@@ -11,4 +11,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="refresh">刷新</string>
     <string name="openByBrowser">用浏览器打开</string>
+    <string name="main_title">DAPP</string>
 </resources>
